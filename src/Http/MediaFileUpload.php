@@ -315,7 +315,7 @@ class MediaFileUpload
         }
 
         $message = $code;
-        $body = json_decode((string) $this->request->getBody(), true);
+        $body = json_decode((string) $response->getBody(), true);
         if (isset($body['error']['errors'])) {
             $message .= ': ';
             foreach ($body['error']['errors'] as $error) {
