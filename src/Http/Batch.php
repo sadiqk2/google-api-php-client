@@ -195,7 +195,7 @@ EOF;
                     // they were sent, so resolve the request and the expected
                     // class from the content id, and only fall back to the
                     // position of the part when the content id is unknown.
-                    $request = $requestsByContentId[$key] ?? ($requests[$i-1] ?? null);
+                    $request = $requestsByContentId[$key] ?? $requests[$i-1] ?? null;
 
                     try {
                         $response = REST::decodeHttpResponse(
