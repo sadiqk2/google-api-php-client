@@ -189,7 +189,7 @@ EOF;
                     );
 
                     // Need content id.
-                    $key = $headers['content-id'];
+                    $key = $headers['content-id'] ?? '';
 
                     // The parts are not guaranteed to be returned in the order
                     // they were sent, so resolve the request and the expected
